@@ -132,7 +132,7 @@ document.querySelector('#product-form').addEventListener('submit',(e)=>{
 document.querySelector('#product-list').addEventListener('click' , (e)=>{
         UI.removeProduct(e.target)
 
-        Store.removeProduct(e.target.parentElement.previousElementSibling.textContent);
+        Store.removeProductFromStore(e.target.parentElement.previousElementSibling.textContent);
         //show message
        UI.showAlert("Product Removed !!",'success');
 });
