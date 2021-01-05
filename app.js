@@ -75,12 +75,11 @@ class Store {
       localStorage.setItem('products', JSON.stringify(products));
     }
   
-    static removeProduct(product_name) {
+   static removeProductFromStore(customers) {
       const products = Store.getProducts();
-  
-      products.forEach((product, index) => {
-        if(product.product_name === product_name) {
-            products.splice(index, 1);
+       products.forEach((product,index) => {
+        if(product.customers === customers) {
+           products.splice(index,1);
         }
       });
   
